@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 import './App.css';
 import React from 'react';
 import { Route } from 'react-router-dom';
@@ -75,25 +74,26 @@ function App() {
           setIsNewsSearchSuccess(false);
         }
       }).catch((err) => {
-        console.log(err);
+        console.error(err);
       });
   };
 
-  // eslint-disable-next-line arrow-body-style
   const compareArticles = (ownArt, outArt) => {
-    // eslint-disable-next-line max-len
-    return ownArt.text === outArt.description && ownArt.title === outArt.title && ownArt.source === outArt.source.name;
+    const compareDescription = ownArt.text === outArt.description;
+    const compareTitle = ownArt.title === outArt.title;
+    const compareSource = ownArt.source === outArt.source.name;
+    return compareDescription && compareTitle && compareSource;
   };
 
   const setIconActiveOfSavedCard = (cardsNewsApi, ownSavedCards) => {
     const result = cardsNewsApi.map((outsiderCard) => {
       const card = ownSavedCards.find((ownCard) => compareArticles(ownCard, outsiderCard));
-      if (card && !outsiderCard._id) {
-        // eslint-disable-next-line no-param-reassign
-        outsiderCard._id = card._id;
-      } else if (!card && outsiderCard._id) {
-        // eslint-disable-next-line no-param-reassign
-        delete outsiderCard._id;
+      const cardId = card._id;
+      let outsiderCardId = outsiderCard._id;
+      if (card && !outsiderCardId) {
+        outsiderCardId = cardId;
+      } else if (!card && outsiderCardId) {
+        outsiderCardId = null;
       }
       return outsiderCard;
     });
@@ -109,7 +109,7 @@ function App() {
           setIconActiveOfSavedCard(newsCards, savedCardsFromApi);
         }); /* если новая карточка сохранилась в БД, то обновляем стейт с сохр карточками */
       }
-    }).catch((err) => console.log(err));
+    }).catch((err) => console.error(err));
   };
 
   const handleDeleteArticle = (idSavedOfCard) => {
@@ -120,7 +120,7 @@ function App() {
           setIconActiveOfSavedCard(newsCards, savedCardsFromApi);
         }); /* если карточка удалилась из БД, то обновляем стейт с сохр карточками */
       }
-    }).catch((err) => console.log(err));
+    }).catch((err) => console.error(err));
   };
 
   const handleRegister = (dataOfInputs) => {
@@ -129,7 +129,7 @@ function App() {
         setIsRegisterPopupOpen(false);
         setRegisterSuccessPopupOpen(true);
       }
-    }).catch((err) => console.log(err));
+    }).catch((err) => console.error(err));
   };
 
   const handleLogin = (dataOfInputs) => {
@@ -148,7 +148,7 @@ function App() {
           setIconActiveOfSavedCard(newsCards, savedCardsFromApi);
         });
       }
-    }).catch((err) => console.log(err));
+    }).catch((err) => console.error(err));
   };
 
   const handleCheckToken = () => {
@@ -157,7 +157,7 @@ function App() {
       auth.getInfoLogin(token).then((getInfo) => {
         setCurrentUser(getInfo);
         return setLoggedIn(true);
-      }).catch((err) => console.log(err));
+      }).catch((err) => console.error(err));
     }
   };
 
@@ -170,7 +170,7 @@ function App() {
       mainApi.getSavedArticlesOfUser().then((savedCardsFromApi) => {
         setSavedNewsCards(savedCardsFromApi);
         return setIconActiveOfSavedCard(getLastArrayWithCards, savedCardsFromApi);
-      }).catch((err) => console.log(err));
+      }).catch((err) => console.error(err));
     }
     if (lastRequest) {
       handleSearchNewsSubmit(lastRequest);
