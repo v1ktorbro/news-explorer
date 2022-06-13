@@ -10,7 +10,6 @@ function SavedNewsHeader({ cards }) {
     [item.keyword.toLowerCase()]: (obj[item.keyword.toLowerCase()] || 0) + 1,
   }), {})).sort((a, b) => b[1] - a[1]).map((a) => a[0]);
 
-  // eslint-disable-next-line no-nested-ternary
   const keysToShow = keys.splice(0, 2).map((s) => s[0].toUpperCase() + s.slice(1)).join(', ') + (keys.length ? keys.length > 1 ? ` и ${keys.length}-м другим` : ' и 1-му другому' : '');
 
   return (
