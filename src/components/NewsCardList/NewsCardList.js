@@ -24,7 +24,6 @@ function NewsCardList({
             <div className="news-card-list__cards">
               {cards.slice(0, loadIndexCards).map((card, index) => (
                 <NewsCard
-                  // eslint-disable-next-line react/no-array-index-key
                   key={index}
                   card={card}
                   onArticleSave={onArticleSave}
