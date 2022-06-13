@@ -46,7 +46,6 @@ function SearchForm({ onSearchNews }) {
     }
   };
 
-  // eslint-disable-next-line no-unused-vars
   const onBlur = (evt) => {
     const formElement = document.querySelector('.search-form');
     const formInput = formElement.querySelector('.search-form__input');
