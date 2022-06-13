@@ -1,11 +1,8 @@
-/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
-/* eslint-disable jsx-a11y/click-events-have-key-events */
-/* eslint-disable jsx-a11y/no-static-element-interactions */
 import './NewsCard.css';
 import React from 'react';
 
-function NewsCard({
-  savedCard, card, loggedIn, onArticleSave, onArticleDelete,
+function NewsCard({ savedCard, card, loggedIn,
+  onArticleSave, onArticleDelete,
 }) {
   const dateCreateNews = (dateISO8601) => new Intl.DateTimeFormat('ru', {
     year: 'numeric',
