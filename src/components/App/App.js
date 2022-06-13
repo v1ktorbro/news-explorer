@@ -107,7 +107,8 @@ function App() {
         mainApi.getSavedArticlesOfUser().then((savedCardsFromApi) => {
           setSavedNewsCards(savedCardsFromApi);
           setIconActiveOfSavedCard(newsCards, savedCardsFromApi);
-        }); /* если новая карточка сохранилась в БД, то обновляем стейт с сохр карточками */
+        });
+        //  если новая карточка сохранилась в БД, то обновляем стейт с сохр карточками
       }
     }).catch((err) => console.error(err));
   };
@@ -118,7 +119,7 @@ function App() {
         mainApi.getSavedArticlesOfUser().then((savedCardsFromApi) => {
           setSavedNewsCards(savedCardsFromApi);
           setIconActiveOfSavedCard(newsCards, savedCardsFromApi);
-        }); /* если карточка удалилась из БД, то обновляем стейт с сохр карточками */
+        }); //  если карточка удалилась из БД, то обновляем стейт с сохр карточками
       }
     }).catch((err) => console.error(err));
   };
