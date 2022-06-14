@@ -1,32 +1,83 @@
-# [News Explorer](https://v1ktorbro.github.io/news-explorer-frontend/index.html)
+# [NewsExplorer](https://v1ktorbro.github.io/news-explorer-frontend/index.html)
+**NewsExplorer** - сервис по поиску  новостей.
 
-# Регистрация и авторизация пользователей работает только локально (не оплачены услуги хостинга).
+<nav 
+  style='display: flex;'>
+  <a 
+    href='https://ru.reactjs.org/' 
+    target='_blank'>
+      <img 
+        src='https://upload.wikimedia.org/wikipedia/commons/thumb/a/a7/React-icon.svg/512px-React-icon.svg.png?20220125121207' 
+        alt='Logo React.JS' 
+        style='margin-right: 20px; width: 35px; height: 30px;'
+      />
+  </a>
+  <a 
+    href='https://www.w3schools.com/js/js_es6.asp/' 
+    target='_blank'>
+      <img 
+        src='https://cdn-icons-png.flaticon.com/512/5968/5968292.png' 
+        alt='Logo JavaScript' 
+        style='margin-right: 20px; width: 30px; height: 30px;'
+      />
+  </a>
+  <a 
+    href='https://www.mongodb.com/' 
+    target='_blank'
+    >
+    <img 
+      src='https://github.com/mongodb/mongo/raw/master/docs/leaf.svg' 
+      alt='Logo MongoDb' 
+      style='margin-right: 20px; width: 30px; height: 30px;'
+    />
+  </a>
+  <a 
+    href='https://cloud.yandex.com/en-ru/' 
+    target='_blank'>
+    <img 
+      src='https://storage.yandexcloud.net/cloud-www-assets/constructor/content-program/icons/yandexcloud.svg' 
+      alt='Logo Yandex.Cloud' 
+      style='margin-right: 20px; width: 30px; height: 30px;'
+    />
+  </a>
+  <a 
+    href='https://expressjs.com/ru/' 
+    target='_blank'>
+      <img 
+        src='https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg' 
+        alt='Logo Express.JS' 
+        style='margin-right: 20px;width: 70px; height: 30px; background-color: #fff;'
+      />
+  </a>
+  <a 
+    href='https://expressjs.com/ru/' 
+    target='_blank'>
+      <img 
+        src='https://www.svgrepo.com/show/303205/html-5-logo.svg' 
+        alt='Logo HTML' 
+        style='margin-right: 20px;width: 30px; height: 30px;'
+      />
+  </a>
+  <a 
+    href='https://expressjs.com/ru/' 
+    target='_blank'>
+      <img 
+        src='https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' 
+        alt='Logo CSS' 
+        style='margin-right: 20px;width: 30px; height: 30px;'
+      />
+  </a>
+</nav>
 
-## Используемый стэк:
+## О проеке 
+* На главной странице запросы передаются в api [NewsApi.org](https://newsapi.org/). Запросы на сохранение, удаление карточек, а так же регистрации и аунтификации отправляются  на бэкэнд, написанный на express.js [ссылка на код](https://github.com/v1ktorbro/news-explorer-api);
+* Авторизация пользователя происходит при помощи [JWT](https://www.npmjs.com/package/jsonwebtoken), который сохраняется в localStorage браузера;
+* Запросы, оставленные при крайнем посещении страницы, записываются в localStorage.
 
-**React.js, CSS3(flex, grid layout), API fetch, БЭМ nested**
+### Корневая структура проекта
 
-## Бэкэнд
-Запросы отправляются с помощью fetch метода на [бекенд](https://github.com/v1ktorbro/news-explorer-api), который размещен на домене https://v1ktorbro.students.nomoreparties.xyz 
-
-## О проеке
-
-Проект [News Explorer](https://v1ktorbro.github.io/news-explorer-frontend/index.html) - сервис по поиску новостей. При запросе поиска новостей на соответствующую тему происходит API запрос на сторонний бэкенд [NewsApi.org](https://newsapi.org/).
-Когда пользователь сохраняет карточку, то запрос происходит на [собственный бекенд](https://github.com/v1ktorbro/news-explorer-api).
-
-Авторизация пользователя происходит при помощи [JWT](https://www.npmjs.com/package/jsonwebtoken), который сохраняется в localStorage браузера и при последующих запросах, которые требуют авторизации (сохранение карточек, а также их удаление), отправляются вместе с fetch методом в виде заголовка.
-
-### Структура проекта
-
-        components/ | компоненты страницы. внутри каждого компонента располагаются его стили;
-        contexts/   | контекст с информацией о текущем пользователе;
-        fonts/      | шрифт Inter;
-        images/     | svg изображения размещенные на странице;
-        utils/      | Api файлы;
-
-
-### Авторы
-
-* **Яндекс.Практикум** *гуру и наставник* - [Yandex.Practikum](https://praktikum.yandex.ru);
-
-* **Виктор Абросимов** *писарь* - [linkedin](https://www.linkedin.com/in/victor-abrosimov-631b6b1a4/).
+        components/ | 
+        contexts/   | 
+        fonts/      | 
+        images/     | 
+        utils/      | 
