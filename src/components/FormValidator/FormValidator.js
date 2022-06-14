@@ -1,9 +1,3 @@
-/* eslint-disable no-useless-escape */
-/* eslint-disable max-len */
-/* eslint-disable no-unused-expressions */
-/* eslint-disable default-case */
-/* eslint-disable no-restricted-syntax */
-/* eslint-disable guard-for-in */
 import React, { useEffect } from 'react';
 
 export const useValidation = (value, validations) => {
@@ -14,6 +8,7 @@ export const useValidation = (value, validations) => {
   const [inputValid, setInputValid] = React.useState(false);
 
   useEffect(() => {
+    const regExForEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     for (const validation in validations) {
       switch (validation) {
         case 'minLength':
@@ -26,9 +21,7 @@ export const useValidation = (value, validations) => {
           value.length > validations[validation] ? setIsMaxLengthError(true) : setIsMaxLengthError(false);
           break;
         case 'isEmail':
-          // eslint-disable-next-line no-case-declarations
-          const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-          re.test(String(value).toLowerCase()) ? setIsEmailError(false) : setIsEmailError(true);
+          regExForEmail.test(String(value).toLowerCase()) ? setIsEmailError(false) : setIsEmailError(true);
           break;
       }
     }
@@ -74,6 +67,5 @@ export const useInput = (initialValue, validations) => {
     isDirty,
     error,
     ...valid,
-
   };
 };

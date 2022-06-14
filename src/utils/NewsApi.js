@@ -1,5 +1,3 @@
-/* eslint-disable prefer-promise-reject-errors */
-/* eslint-disable consistent-return */
 class NewsApi {
   constructor({ url, apiKey, headers }) {
     this.url = url;

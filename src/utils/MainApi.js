@@ -1,4 +1,3 @@
-/* eslint-disable arrow-body-style */
 class MainApi {
   constructor({ url, headers }) {
     this.url = url;
@@ -6,14 +5,11 @@ class MainApi {
   }
 
   getSavedArticlesOfUser() {
-    // eslint-disable-next-line no-underscore-dangle
     this._updateToken();
     return fetch(`${this.url}/articles`, {
       method: 'GET',
       headers: this.headers,
-    }).then((res) => {
-      return res.json();
-    });
+    }).then((res) => res.json());
   }
 
   saveArticle(dataOfArticle) {
@@ -29,9 +25,7 @@ class MainApi {
         link: dataOfArticle.url,
         image: dataOfArticle.urlToImage,
       }),
-    }).then((res) => {
-      return res.json();
-    });
+    }).then((res) => res.json());
   }
 
   deleteArticle(articleId) {
@@ -54,7 +48,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  url: 'https://v1ktorbro.students.nomoreparties.xyz',
+  url: 'http://localhost:4000',
   headers: {
     Authorization: `Bearer ${localStorage.getItem('token')}`,
     'Content-Type': 'application/json',
