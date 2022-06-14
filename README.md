@@ -13,6 +13,15 @@
       />
   </a>
   <a 
+    href='https://expressjs.com/ru/' 
+    target='_blank'>
+      <img 
+        src='https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg' 
+        alt='Logo Express.JS' 
+        style='margin-right: 20px;width: 70px; height: 30px; background-color: #fff;'
+      />
+  </a>
+  <a 
     href='https://www.w3schools.com/js/js_es6.asp/' 
     target='_blank'>
       <img 
@@ -39,15 +48,6 @@
       alt='Logo Yandex.Cloud' 
       style='margin-right: 20px; width: 30px; height: 30px;'
     />
-  </a>
-  <a 
-    href='https://expressjs.com/ru/' 
-    target='_blank'>
-      <img 
-        src='https://www.vectorlogo.zone/logos/expressjs/expressjs-ar21.svg' 
-        alt='Logo Express.JS' 
-        style='margin-right: 20px;width: 70px; height: 30px; background-color: #fff;'
-      />
   </a>
   <a 
     href='https://expressjs.com/ru/' 
