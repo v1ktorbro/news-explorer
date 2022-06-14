@@ -1,16 +1,16 @@
 import './About.css';
 import React from 'react';
-import authorAvatar from '../../images/author-avatar.png';
+import picture from '../../images/kirovgrad.jpeg';
 
 function About() {
   return (
     <section className="about">
-      <img className="about__avatar" src={authorAvatar} alt="аватарка автора" />
+      <img className="about__avatar" src={picture} alt="Картинка города Батуми" />
       <div className="about__text">
-        <h2 className="about__title">Об авторе</h2>
+        <h2 className="about__title">Кировград</h2>
         <div className="about__description">
-          <p className="about__author">Это блок с описанием автора проекта. Здесь следует указать, как вас зовут, чем вы занимаетесь, какими технологиями разработки владеете.</p>
-          <p className="about__author">Также можно рассказать о процессе обучения в Практикуме, чему вы тут научились, и чем можете помочь потенциальным заказчикам.</p>
+          <p className="about__author">До 1935 года город назывался <em>Калата</em>. Население около 30 000 человек.</p>
+          <p className="about__author">Моя малая родина, в которой я вырос и получил все ценные моменты жизни.</p>
         </div>
       </div>
     </section>
