@@ -62,6 +62,15 @@
     href='https://expressjs.com/ru/' 
     target='_blank'>
       <img 
+        src='https://git-scm.com/images/logos/downloads/Git-Icon-1788C.png' 
+        alt='Logo HTML' 
+        style='margin-right: 20px;width: 30px; height: 30px;'
+      />
+  </a>
+  <a 
+    href='https://expressjs.com/ru/' 
+    target='_blank'>
+      <img 
         src='https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg' 
         alt='Logo CSS' 
         style='margin-right: 20px;width: 30px; height: 30px;'

@@ -88,12 +88,10 @@ function App() {
   const setIconActiveOfSavedCard = (cardsNewsApi, ownSavedCards) => {
     const result = cardsNewsApi.map((outsiderCard) => {
       const card = ownSavedCards.find((ownCard) => compareArticles(ownCard, outsiderCard));
-      const cardId = card._id;
-      let outsiderCardId = outsiderCard._id;
-      if (card && !outsiderCardId) {
-        outsiderCardId = cardId;
-      } else if (!card && outsiderCardId) {
-        outsiderCardId = null;
+      if (card && !outsiderCard._id) {
+        outsiderCard._id = card._id;
+      } else if (!card && outsiderCard._id) {
+        delete outsiderCard._id;
       }
       return outsiderCard;
     });
