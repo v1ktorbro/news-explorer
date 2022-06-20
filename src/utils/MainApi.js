@@ -48,7 +48,7 @@ class MainApi {
 }
 
 const mainApi = new MainApi({
-  url: 'http://localhost:4000',
+  url: 'https://newsexplorer.abrosimov.site/api',
   headers: {
     Authorization: `Bearer ${localStorage.getItem('token')}`,
     'Content-Type': 'application/json',
