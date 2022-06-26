@@ -1,10 +1,12 @@
 # [NewsExplorer](https://v1ktorbro.github.io/news-explorer/index.html)
 
+**[ Base URL: newsexplorer.abrosimov.site ]**
+
 
 ## Инструменты
 **REACT, JS, GIT, CSS, HTML, FIGMA, NGINX, UBUNTU, TRELLO.**
 
-## О проеке 
+## О проекте 
 *NewsExplorer - сервис по поиску новостей. На сайте присутствует возможность поиска новостей на любую тематику, а также ее просмотр. После регистрации появляется возможность сохранения и удаления новостей в избранные.*
 
 * Запросы по поиску новостей передаются по api [NewsApi.org](https://newsapi.org/);
