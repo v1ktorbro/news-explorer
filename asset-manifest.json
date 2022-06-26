@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/static/css/main.3b77545e.chunk.css",
+    "main.js": "/static/js/main.25fd8d6f.chunk.js",
+    "main.js.map": "/static/js/main.25fd8d6f.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.90b78732.js",
+    "runtime-main.js.map": "/static/js/runtime-main.90b78732.js.map",
+    "static/js/2.0449703f.chunk.js": "/static/js/2.0449703f.chunk.js",
+    "static/js/2.0449703f.chunk.js.map": "/static/js/2.0449703f.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.7493167dd73fef516eab3094971e0a69.js": "/precache-manifest.7493167dd73fef516eab3094971e0a69.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/main.3b77545e.chunk.css.map": "/static/css/main.3b77545e.chunk.css.map",
+    "static/js/2.0449703f.chunk.js.LICENSE.txt": "/static/js/2.0449703f.chunk.js.LICENSE.txt",
+    "static/media/NewsCard.css": "/static/media/btn-delete_hover.27430009.svg",
+    "static/media/PopupWithForm.css": "/static/media/btn-close.3f751185.svg",
+    "static/media/facebook_icon.svg": "/static/media/facebook_icon.4521f6ae.svg",
+    "static/media/github_icon.svg": "/static/media/github_icon.c4960b36.svg",
+    "static/media/index.css": "/static/media/sourcesanspro-regular.49d8d828.woff",
+    "static/media/kirovgrad.jpeg": "/static/media/kirovgrad.5412e815.jpeg",
+    "static/media/logout_black.svg": "/static/media/logout_black.0c9616ca.svg",
+    "static/media/logout_white.svg": "/static/media/logout_white.936d33be.svg",
+    "static/media/Main.css": "/static/media/main_320px.9718b6f6.png",
+    "static/media/Preloader.css": "/static/media/search-result_error.5bbc83be.svg",
+    "static/media/telegram_icon.svg": "/static/media/telegram_icon.f22e7129.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.90b78732.js",
+    "static/js/2.0449703f.chunk.js",
+    "static/css/main.3b77545e.chunk.css",
+    "static/js/main.25fd8d6f.chunk.js"
+  ]
+}
