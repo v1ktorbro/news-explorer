@@ -1,6 +1,5 @@
 .about__description {
   margin-top: 24px;
-  color: #1A1B22;
 }
 
 @media screen and (max-width: 830px) {
@@ -11,14 +10,6 @@
 
 @media screen and (max-width: 560px) {
   .about__description {
-    height: 330px;
-    width: 330px;
-  }
-}
-
-@media screen and (max-width: 425px) {
-  .about__description {
-    height: 288px;
-    width: 288px;
+    height: 100%;
   }
 }
