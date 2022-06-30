@@ -18,6 +18,7 @@ import SuccessRegisterPopup from '../SuccessRegisterPopup/SuccessRegisterPopup';
 import * as auth from '../../utils/Auth';
 import CurrentUserContext from '../../context/CurrentUserContext';
 import ProtectedRoute from '../ProtectedRoute/ProtectedRoute';
+import JobNotification from '../JobNotification/JobNotification';
 
 function App() {
   const [isSearchingNews, setIsSearcinghNews] = React.useState(false);
@@ -184,6 +185,7 @@ function App() {
   return (
     <>
       <CurrentUserContext.Provider value={currentUser}>
+        <JobNotification />
         <Route exact path="/">
           <Login
             isOpen={isLoginPopupOpen}
