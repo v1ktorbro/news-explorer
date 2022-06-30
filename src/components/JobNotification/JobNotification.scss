@@ -1,0 +1,178 @@
+$textColor: #000;
+$backgroundColorContainer: #fff;
+
+.job-notification {
+  max-width: 1440px;
+  position: fixed;
+  height: 100vh;
+  background-color: rgba($color: #000000, $alpha: .7);
+  z-index: 5;
+  &_opened {
+    display: flex;
+  }
+  &_closed {
+    display: none;
+  }
+}
+
+.job-notification__container {
+  font-family: 'Roboto Slab';
+  font-weight: 400;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 50%;
+  color: $textColor;
+  background-color: $backgroundColorContainer;
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.job-notification__title {
+  font-size: 60px;
+  line-height: 64px;
+  margin: 0;
+  text-align: center;
+}
+
+.job-notification__description {
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+  margin-top: 35px;
+}
+
+.job-notification__form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 45px;
+}
+
+.job-notification__checkbox-block {
+  align-self: flex-start;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.job-notification__btn-submit {
+  font-size: 18px;
+  line-height: 24px;
+  margin-top: 40px;
+  outline: none;
+  border-width: 1px;
+  border-style: solid;
+  border-color: inherit;
+  border-radius: 15px;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  color: rgba($color: #000000, $alpha: 1.0);
+  &:disabled {
+    color: rgba($color: #000000, $alpha: .3);
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .job-notification__title {
+    font-size: 45px;
+    line-height: 50px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .job-notification__title {
+    font-size: 33px;
+    line-height: 38px;
+    text-align: start;
+  }
+
+  .job-notification__description {
+    font-size: 16px;
+    line-height: 20px;
+    margin-top: 30px;
+    text-align: start;
+  }
+
+  .job-notification__form {
+    margin-top: 20px;
+  }
+
+  .job-notification__checkbox-block {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .job-notification__btn-submit {
+    font-size: 16px;
+    line-height: 20px;
+    padding: 7px;
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .job-notification__container {
+    padding: 30px;
+  }
+
+  .job-notification__title {
+    font-size: 25px;
+    line-height: 30px;
+  }
+
+  .job-notification__description {
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 15px;
+  }
+
+  .job-notification__form {
+    margin-top: 15px;
+  }
+
+  .job-notification__checkbox-block {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .job-notification__btn-submit {
+    font-size: 14px;
+    line-height: 18px;
+    padding: 5px;
+    margin-top: 15px;
+  }
+}
+
+
+@media screen and (max-width: 425px) {
+  .job-notification__container {
+    padding: 20px;
+  }
+
+  .job-notification__title {
+    font-size: 20px;
+    line-height: 23px;
+  }
+
+  .job-notification__description {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .job-notification__form {
+    margin-top: 15px;
+  }
+
+  .job-notification__checkbox-block {
+    font-size: 12px;
+    line-height: 14px;
+  }
+
+  .job-notification__btn-submit {
+    font-size: 12px;
+    line-height: 14px;
+    padding: 5px;
+    margin-top: 15px;
+  }
+}
